@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"name": "light_manager",
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdexcept": "cpp",
+			"string": "cpp"
+		}
+	}
+}
