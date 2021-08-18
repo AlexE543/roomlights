@@ -1,0 +1,10 @@
+name: roomlights
+
+dependencies:
+  - python
+  - flask
+  - flask-restx
+  - pip
+  - flask-cors
+  - pip:
+    - spotipy
