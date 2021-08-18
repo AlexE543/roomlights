@@ -43,7 +43,7 @@ export default function Main() {
     const [spotifyStatus, setSpotifyStatus] = useState(false);
     const [songUri, setSongUri] = useState('default');
     
-    const baseUrl = "http://127.0.0.1:5000/spotify/"
+    const baseUrl = "/spotify/"
 
     if (!navigator.bluetooth) {
         alert('Sorry, your browser doesn\'t support Bluetooth API');

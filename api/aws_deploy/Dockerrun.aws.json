@@ -1,0 +1,13 @@
+{
+    "AWSEBDockerrunVersion": "1",
+    "Image": {
+      "Name": "497979473935.dkr.ecr.us-east-2.amazonaws.com/roomlights-backend",
+      "Update": "true"
+    },
+    "Ports": [
+      {
+        "ContainerPort": 8080,
+        "HostPort": 8080
+      }
+    ]
+  }

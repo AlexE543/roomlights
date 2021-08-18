@@ -6,5 +6,6 @@ dependencies:
   - flask-restx
   - pip
   - flask-cors
+  - gunicorn
   - pip:
     - spotipy
