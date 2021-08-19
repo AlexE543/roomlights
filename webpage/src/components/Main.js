@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -38,7 +37,6 @@ export default function Main() {
     const classes = useStyles();
 
     const [command, setCommand] = useState('');
-    // const [deviceCache, setDeviceCache] = useState(null);
     const [characteristicCache, setCharacteristicCache] = useState(null);
     const [spotifyStatus, setSpotifyStatus] = useState(false);
     const [songUri, setSongUri] = useState('default');
@@ -58,7 +56,6 @@ export default function Main() {
           })
           .then(device => {
             console.log(device);
-            // setDeviceCache(device);
             device.addEventListener('gattserverdisconnected',
                 handleDisconnection);
             connectDeviceAndCacheCharacteristic(device);
@@ -105,7 +102,6 @@ export default function Main() {
       }
     
       console.log('Connecting to GATT server...');
-    
       return device.gatt.connect()
           .then(server => {
             console.log('GATT server connected, getting service...');
@@ -223,7 +219,5 @@ export default function Main() {
             <Button size="large" variant="contained" color="primary" onClick={handleSolid}>Solid</Button>
           </Grid>
         </Grid>
-        {/* <TextField onChange={e => setCommand(e.target.value)} value={command} onKeyDown={handleKeyDown}/>
-        <Button color="secondary" onClick={handleSubmit}>Submit</Button> */}
       </div>
 }
