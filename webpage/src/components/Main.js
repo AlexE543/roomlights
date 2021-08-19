@@ -54,7 +54,7 @@ export default function Main() {
           console.log(navigator)
           console.log('Requesting any Bluetooth device...');
           await navigator.bluetooth.requestDevice({
-            acceptAllDevices: true
+            filters: [{name: 'lights'}, {services: ['f468ff61-b23c-419c-b183-e36e12bcdb11']}],
           })
           .then(device => {
             console.log(device);
